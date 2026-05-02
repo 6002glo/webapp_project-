@@ -1,18 +1,56 @@
-body{
+/* ========== BASE & RESET ========== */
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-color: rgb(250, 255, 254);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.8;
     font-size: 16px;
 }
-*{
-    box-sizing: border-box;
+
+/* ========== FIXED NAVIGATION (from my version) ========== */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0a2b4e, #1c3e6c);
+    padding: 12px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-.toplink{
+
+.fixed-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.1);
+}
+
+.fixed-nav a:hover {
+    background: #ff9800;
+    color: #0a2b4e;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ========== ORIGINAL TOP LINK NAV (keep for compatibility) ========== */
+.toplink {
     background-color: rgb(51, 51, 50);
     overflow: hidden;
 }
-.toplink a{
+
+.toplink a {
     color: #ffffff;
     float: left;
     display: block;
@@ -20,43 +58,53 @@ body{
     text-align: left;
     padding: 14px 16px;
 }
-.toplink a:hover{
+
+.toplink a:hover {
     background-color: #ffffff;
     color: rgb(51, 51, 50);
     text-decoration: none;
 }
-.banner{
+
+/* ========== BANNER ========== */
+.banner {
     background-color: #5f5e5e;
     color: #ffffff;
     padding: 20px;
     text-align: center;
 }
-.row:after{
+
+/* ========== LAYOUT: ROW & COLUMNS (your original structure) ========== */
+.row:after {
     display: flex;
     content: "";
     clear: both;
 }
-.left_side_bar{
+
+.left_side_bar {
     float: left;
     width: 15%;
     background-color: #ebebeb;
     padding: 20px;
 }
-.content{
+
+.content {
     float: left;
     width: 70%;
     background-color: #ebebeb;
     padding: 20px;
-    border-left:#5f5e5e 1px dashed;
-    border-right:#5f5e5e 1px dashed;
+    border-left: #5f5e5e 1px dashed;
+    border-right: #5f5e5e 1px dashed;
 }
-.right_side_bar{
+
+.right_side_bar {
     float: left;
     width: 15%;
     background-color: #ebebeb;
     padding: 20px;
 }
-.footer{
+
+/* ========== FOOTER ========== */
+.footer {
     background-color: rgb(51, 51, 50);
     color: #ffffff;
     font-size: small;
@@ -64,33 +112,45 @@ body{
     padding: 10px;
 }
 
-
-h1{
+/* ========== TYPOGRAPHY ========== */
+h1 {
     text-transform: uppercase;
+    color: #0a2b4e;
+    border-left: 5px solid #ff9800;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
-h2{
+
+h2 {
     text-decoration: none;
     color: #373737;
+    border-bottom: 2px solid #e0e4e8;
+    padding-bottom: 8px;
+    margin-top: 25px;
 }
-p{
+
+p {
     text-align: justify;
 }
-.underline{
+
+.underline {
     text-decoration: underline;
 }
 
-.team_img{
+/* ========== TEAM IMAGES (your original) ========== */
+.team_img {
     overflow: hidden;
     text-align: center;
 }
-.team_img img{
+
+.team_img img {
     width: 180px;
     height: 240px;
     padding: 5px;
     border-radius: 20%;
-    /* object-fit: cover; */
 }
-.team_member{
+
+.team_member {
     text-align: center;
     font-size: small;
     color: #880f0f;
@@ -99,4 +159,87 @@ p{
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+/* ========== MAIN CONTENT AREA (for term pages) ========== */
+main {
+    max-width: 1100px;
+    margin: 100px auto 40px auto;
+    background: white;
+    padding: 40px 45px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Images inside main content */
+.term-img, .hero-img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Lists inside main */
+main ul {
+    margin: 15px 0 15px 30px;
+}
+
+main li {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* Code styling */
+code {
+    background: #f0f2f5;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    color: #d9534f;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 130px;
+    }
+    
+    .fixed-nav a {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    
+    .left_side_bar, .right_side_bar {
+        width: 100%;
+        float: none;
+    }
+    
+    .content {
+        width: 100%;
+        float: none;
+    }
+    
+    main {
+        padding: 25px 20px;
+        margin: 100px 15px 40px 15px;
+    }
+    
+    h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fixed-nav {
+        padding: 8px 12px;
+        gap: 5px;
+    }
+    
+    .fixed-nav a {
+        font-size: 9px;
+        padding: 3px 7px;
+    }
 }
