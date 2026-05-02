@@ -1,87 +1,102 @@
-* {
+body{
+    background-color: rgb(250, 255, 254);
     margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+}
+*{
     box-sizing: border-box;
 }
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f4;
-    padding-top: 80px;
+.toplink{
+    background-color: rgb(51, 51, 50);
+    overflow: hidden;
 }
-
-/* Fixed navigation - appears same spot on every page */
-.fixed-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    padding: 15px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.fixed-nav a {
-    color: white;
+.toplink a{
+    color: #ffffff;
+    float: left;
+    display: block;
     text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 25px;
-    font-size: 14px;
-    transition: 0.3s;
-    background: rgba(255,255,255,0.1);
+    text-align: left;
+    padding: 14px 16px;
 }
-
-.fixed-nav a:hover {
-    background: #ff9800;
-    color: #1e1e1e;
-    transform: scale(1.05);
+.toplink a:hover{
+    background-color: #ffffff;
+    color: rgb(51, 51, 50);
+    text-decoration: none;
 }
-
-main {
-    max-width: 1100px;
-    margin: 30px auto;
-    background: white;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-h1 {
-    color: #1e3c72;
-    margin-bottom: 20px;
-    border-left: 6px solid #ff9800;
-    padding-left: 20px;
-}
-
-p {
-    line-height: 1.7;
-    margin: 20px 0;
-    font-size: 18px;
-}
-
-.term-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 30px auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-.hero-img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 30px auto;
-    border-radius: 16px;
-}
-
-footer {
-    text-align: center;
+.banner{
+    background-color: #5f5e5e;
+    color: #ffffff;
     padding: 20px;
-    color: #666;
+    text-align: center;
+}
+.row:after{
+    display: flex;
+    content: "";
+    clear: both;
+}
+.left_side_bar{
+    float: left;
+    width: 15%;
+    background-color: #ebebeb;
+    padding: 20px;
+}
+.content{
+    float: left;
+    width: 70%;
+    background-color: #ebebeb;
+    padding: 20px;
+    border-left:#5f5e5e 1px dashed;
+    border-right:#5f5e5e 1px dashed;
+}
+.right_side_bar{
+    float: left;
+    width: 15%;
+    background-color: #ebebeb;
+    padding: 20px;
+}
+.footer{
+    background-color: rgb(51, 51, 50);
+    color: #ffffff;
+    font-size: small;
+    text-align: center;
+    padding: 10px;
+}
+
+
+h1{
+    text-transform: uppercase;
+}
+h2{
+    text-decoration: none;
+    color: #373737;
+}
+p{
+    text-align: justify;
+}
+.underline{
+    text-decoration: underline;
+}
+
+.team_img{
+    overflow: hidden;
+    text-align: center;
+}
+.team_img img{
+    width: 180px;
+    height: 240px;
+    padding: 5px;
+    border-radius: 20%;
+    /* object-fit: cover; */
+}
+.team_member{
+    text-align: center;
+    font-size: small;
+    color: #880f0f;
+    font-style: italic;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
 }
