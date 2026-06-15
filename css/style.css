@@ -1,7 +1,7 @@
 /* ========== BASE & RESET ========== */
 * {
     box-sizing: border-box;
-}
+}e
 
 body {
     background-color: rgb(250, 255, 254);
@@ -79,7 +79,7 @@ body {
     content: "";
     clear: both;
 }
-
+g
 .left_side_bar {
     float: left;
     width: 15%;
